@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const astro = document.querySelector(".hero-media");
     const text = document.querySelector(".hero-text");
-    const bg = document.querySelector(".layer-bg");
+    const bg = document.querySelector(".background");
     const cards = document.querySelectorAll(".card");
 
     let mouseX = 0;
