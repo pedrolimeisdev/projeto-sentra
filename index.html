@@ -1,77 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sentra</title>
-    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="css/styles.css" />
     <script src="js/scripts.js" defer></script>
-</head>
-<body>
+  </head>
 
-<header class="navbar">
-    <div class="logo">
+  <body>
+    <header class="navbar">
+      <div class="logo">
         <span class="logo-text">Sentra</span>
-    </div>
+      </div>
 
-    <nav>
+      <nav>
         <a href="#">Tecnologia</a>
         <a href="#">Monitoramento</a>
         <a href="#">Relatórios</a>
         <a href="#">Alertas</a>
         <a href="#">Empresas</a>
-    </nav>
+      </nav>
 
-    <button class="btn-nav">Agendar Demonstração</button>
-</header>
+      <button class="btn-nav">Agendar Demonstração</button>
+    </header>
 
-<section class="hero">
+    <section class="hero">
+      <div class="parallax-layer layer-bg"></div>
 
-    <div class="parallax-layer layer-bg"></div>
-
-    <div class="hero-text parallax" data-speed="2">
+      <div class="hero-text parallax" data-speed="2">
         <p class="tag">INTELIGÊNCIA ORBITAL CONTRA INCÊNDIOS</p>
 
         <h1>
-            ALERTA DE INCÊNDIOS AUTOMATIZADO<br>
-            <span>(SENTRA)</span>
+          ALERTA DE INCÊNDIOS AUTOMATIZADO<br />
+          <span>(SENTRA)</span>
         </h1>
 
         <p class="desc">
-            Monitoramento via satélite em tempo real, inteligência de dados e alertas para prevenção de incêndios florestais.
+          Monitoramento via satélite em tempo real, inteligência de dados e
+          alertas para prevenção de incêndios florestais.
         </p>
 
         <div class="actions">
-            <button class="btn-primary">Explorar Plataforma</button>
-            <button class="btn-secondary">Ver Tecnologia</button>
-        </div>
-    </div>
+          <button class="btn-primary">Explorar Plataforma</button>
 
-    <div class="hero-media">
-        <img src="assets/astronauta.webp" alt="Astronauta em órbita">
-    </div>
+          <button class="btn-secondary">Ver Tecnologia</button>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-media">
+          <img src="assets/astronauta.webp" alt="Astronauta em órbita" />
+        </div>
 
         <div class="heat-widget parallax" id="heat-widget">
-        <div class="heat-header">
-            Focos de calor (24h)
-            <span id="heat-time">atualizando...</span>
-        </div>
+          <div class="heat-header">
+            🔥 Focos de calor (24h)
 
-        <div class="heat-body">
+            <span id="heat-time"> atualizando... </span>
+          </div>
+
+          <div class="heat-body">
             <div class="heat-number" id="heat-count">0</div>
+
             <div class="heat-label">detecções recentes</div>
+          </div>
         </div>
-    </div>
-</div>
 
-</section>
+        <section class="stats">
+          <div class="stat-item">
+            <div class="icon">🛰</div>
 
-<section class="stats">
-    <div class="card">🛰️ <span>18</span> Satélites ativos</div>
-    <div class="card">📍 <span>43</span> Área em risco</div>
-    <div class="card">🔥 <span>5</span> Incêndios detectados</div>
-    <div class="card">⏱️ <span>&lt;30s</span> Tempo de alerta</div>
-</section>
+            <div class="stat-info">
+              <p>SATÉLITES ATIVOS</p>
+              <span>18</span>
+            </div>
+          </div>
 
-</body>
+          <div class="divider"></div>
+
+          <div class="stat-item">
+            <div class="icon">◎</div>
+
+            <div class="stat-info">
+              <p>ÁREAS EM RISCO</p>
+              <span>43</span>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="stat-item">
+            <div class="icon">🔥</div>
+
+            <div class="stat-info">
+              <p>INCÊNDIOS DETECTADOS</p>
+              <span>127</span>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="stat-item">
+            <div class="icon">◔</div>
+
+            <div class="stat-info">
+              <p>TEMPO DE ALERTA</p>
+              <span>30s</span>
+            </div>
+          </div>
+          <a href="#" class="stats-link"> VER TODOS OS DADOS → </a>
+        </section>
+      </div>
+    </section>
+  </body>
 </html>
