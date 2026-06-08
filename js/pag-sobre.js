@@ -3,8 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const bodyEl = document.body;
   const heroGlow = document.querySelector(".sobre-hero .hero-efeito");
   const heroContent = document.querySelector(".hero-content");
-  const valueCards = document.querySelectorAll(".valor-card");
-  const memberCards = document.querySelectorAll(".membro-card");
 
   // ==========================================================================
   // 1. EFEITO PARALLAX DE FUNDO E HERO EFEITO
@@ -14,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let smoothX = 0;
   let smoothY = 0;
 
-  // Captura o movimento do cursor ou toque na tela
+  // Captura a posição do cursor ou do toque na tela
   function handleMove(clientX, clientY) {
     const centerX = window.innerWidth / 2;
     const centerY = window.innerHeight / 2;
@@ -24,6 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
     mouseY = (clientY - centerY) / 45;
   }
 
+  const reduceMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (reduceMotion) return;
+  
   document.addEventListener("mousemove", (e) => {
     handleMove(e.clientX, e.clientY);
   });

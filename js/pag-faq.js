@@ -1,6 +1,5 @@
 // ==========================================================================
-// INTERATIVIDADE DA PÁGINA FAQ (PARALLAX ORBITAL, ACCORDION E BUSCA DINÂMICA)
-// Baseado nas técnicas interativas da plataforma SENTRA
+// INTERATIVIDADE DA PÁGINA FAQ (PARALLAX ORBITAL E ACCORDION)
 // ==========================================================================
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -13,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const temParallax = bodyEl || heroGlow || heroContent;
 
   // ==========================================================================
-  // 1. EFEITO PARALLAX DE FUNDO E HERO EFEITO (SUAVE)
+  // 1. EFEITO PARALLAX DE FUNDO E HERO EFEITO
   // ==========================================================================
   let mouseX = 0;
   let mouseY = 0;
@@ -100,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         item.classList.add("ativo");
         
-        // Inversão lógica estrita de CSS Inline para evitar flickering/bugs de renderização
+        // Ajusta dinamicamente o espaçamento da resposta aberta
         answer.style.paddingTop = "10px";
         answer.style.paddingBottom = "20px";
         // Define a altura baseada no scroll real + padding adicionado manualmente

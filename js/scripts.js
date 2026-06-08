@@ -175,5 +175,5 @@ document.addEventListener("DOMContentLoaded", () => {
   updateHeat();
 
   // Atualiza a cada 3 segundos
-  const heatInterval = setInterval(updateHeat, 3000);
+  setInterval(updateHeat, 3000);
 });

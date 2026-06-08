@@ -106,7 +106,7 @@ main {
     line-height: 1.6;
     max-width: 660px;
     margin: 0 auto 40px;
-}   
+}
 
 /* ==========================================================================
    SEÇÃO PERGUNTAS
@@ -243,7 +243,7 @@ main {
     background: rgba(255, 106, 0, 0.05);
     border: 1px solid rgba(255, 106, 0, 0.25);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 25px rgba(255, 106, 0, 0.05);
-    opacity: 0; /* CORREÇÃO: Evita FOUC */
+    opacity: 0;
     animation: fadeUp 1.2s ease forwards;
 }
 
@@ -335,6 +335,7 @@ main {
         opacity: 0;
         transform: translateY(40px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -355,10 +356,6 @@ main {
 
     .faq-suporte {
         padding: 20px;
-    }
-
-    .faq-titulo {
-        font-size: 52px;
     }
 
     .faq-pergunta {
