@@ -4,9 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const heroGlow = document.querySelector(".sobre-hero .hero-efeito");
   const heroContent = document.querySelector(".hero-content");
 
-  // ==========================================================================
+
   // 1. EFEITO PARALLAX DE FUNDO E HERO EFEITO
-  // ==========================================================================
   let mouseX = 0;
   let mouseY = 0;
   let smoothX = 0;

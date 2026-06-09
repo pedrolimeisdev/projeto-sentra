@@ -1,7 +1,5 @@
-// ==========================================================================
-// INTERATIVIDADE DA PÁGINA FAQ (PARALLAX ORBITAL E ACCORDION)
-// ==========================================================================
 
+// INTERATIVIDADE DA PÁGINA FAQ (PARALLAX ORBITAL E ACCORDION)
 document.addEventListener("DOMContentLoaded", () => {
   // Seleção dos elementos para o Parallax
   const bodyEl = document.body;
@@ -11,9 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Se nenhum elemento do parallax existir, evita rodar o loop à toa
   const temParallax = bodyEl || heroGlow || heroContent;
 
-  // ==========================================================================
-  // 1. EFEITO PARALLAX DE FUNDO E HERO EFEITO
-  // ==========================================================================
+  // EFEITO PARALLAX DE FUNDO E HERO EFEITO
   let mouseX = 0;
   let mouseY = 0;
   let smoothX = 0;
@@ -65,9 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderParallax();
 
-  // ==========================================================================
-  // 2. ABRIR E FECHAR AS PERGUNTAS (ACCORDION)
-  // ==========================================================================
+  // ABRIR E FECHAR AS PERGUNTAS (ACCORDION)
   const faqItems = document.querySelectorAll(".faq-item");
 
   faqItems.forEach((item) => {

@@ -1,10 +1,7 @@
 @import url('navbar.css');
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght=200..800&family=Inter:wght=300;400;600;700&display=swap');
 
-/* ==========================================================================
-   CONFIGURAÇÕES GLOBAIS E FUNDO
-   ========================================================================== */
-
+/* CONFIGURAÇÕES GLOBAIS E FUNDO */
 html {
     scroll-behavior: smooth;
 }
@@ -33,10 +30,7 @@ main {
     padding-top: 100px;
 }
 
-/* ==========================================================================
-   SEÇÃO HERO DA EQUIPE
-   ========================================================================== */
-
+/* SEÇÃO HERO DA EQUIPE */
 .equipe-hero {
     position: relative;
     padding: 120px 40px 60px;
@@ -101,10 +95,8 @@ main {
     margin: 0 auto;
 }
 
-/* ==========================================================================
-   SEÇÃO MEMBROS (GRADE E CARDS GLASSMORPHISM)
-   ========================================================================== */
 
+/* SEÇÃO MEMBROS (GRADE E CARDS GLASSMORPHISM) */
 .equipe-membros {
     padding: 20px 40px 80px;
     max-width: 1400px;
@@ -180,7 +172,7 @@ main {
     transform: scaleX(1);
 }
 
-/* Avatar / Imagem de perfil dos Integrantes */
+/*Imagem de perfil dos Integrantes */
 .membro-avatar-wrapper {
     position: relative;
     width: 130px;
@@ -314,10 +306,7 @@ main {
     transform: translateY(-4px) scale(1.08);
 }
 
-/* ==========================================================================
-   RODAPÉ (FOOTER)
-   ========================================================================== */
-
+   /* RODAPÉ */
 .footer {
     width: 100%;
     padding: 24px 20px;
@@ -339,10 +328,8 @@ main {
     text-align: center;
 }
 
-/* ==========================================================================
-   ANIMAÇÕES DE ENTRADA
-   ========================================================================== */
 
+/* ANIMAÇÕES DE ENTRADA */
 @keyframes fadeUp {
     from {
         opacity: 0;
@@ -367,10 +354,7 @@ main {
     }
 }
 
-/* ==========================================================================
-   RESPONSIVIDADE (MEDIA QUERIES)
-   ========================================================================== */
-
+/* RESPONSIVIDADE */
 /*Desktop*/
 @media (max-width: 1200px) {
     .membros-container {

@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ==========================================================================
-  // SELEÇÃO DOS ELEMENTOS DO DOM
-  // ==========================================================================
 
+  // SELEÇÃO DOS ELEMENTOS DO DOM
   const astro = document.querySelector(".hero-media");
   const text = document.querySelector(".hero-text");
   const bodyEl = document.body;
@@ -11,10 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const heatCount = document.getElementById("heat-count");
   const heatTime = document.getElementById("heat-time");
 
-  // ==========================================================================
-  // VARIÁVEIS DE CONTROLE DO EFEITO PARALLAX
-  // ==========================================================================
 
+  // VARIÁVEIS DE CONTROLE DO EFEITO PARALLAX
   let mouseX = 0;
   let mouseY = 0;
   let smoothX = 0;
@@ -24,10 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let lastX = null;
   let lastY = null;
 
-  // ==========================================================================
   // CAPTURA A POSIÇÃO DO CURSOR OU TOQUE NA TELA
-  // ==========================================================================
-
   function handleMove(clientX, clientY) {
     const centerX = window.innerWidth / 2;
     const centerY = window.innerHeight / 2;
@@ -47,18 +40,13 @@ document.addEventListener("DOMContentLoaded", () => {
     lastY = clientY;
   }
 
-  // ==========================================================================
+ 
   // EVENTO DE MOVIMENTO DO MOUSE
-  // ==========================================================================
-
   document.addEventListener("mousemove", (e) => {
     handleMove(e.clientX, e.clientY);
   });
 
-  // ==========================================================================
   // EVENTO DE MOVIMENTO EM DISPOSITIVOS TOUCH
-  // ==========================================================================
-
   document.addEventListener(
     "touchmove",
     (e) => {
@@ -69,10 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
     { passive: true },
   );
 
-  // ==========================================================================
-  // REGISTRA A POSIÇÃO INICIAL DO TOQUE
-  // ==========================================================================
 
+  // REGISTRA A POSIÇÃO INICIAL DO TOQUE
   document.addEventListener(
     "touchstart",
     (e) => {
@@ -84,11 +70,9 @@ document.addEventListener("DOMContentLoaded", () => {
     { passive: true },
   );
 
-  // ==========================================================================
+
   // RENDERIZAÇÃO DO EFEITO PARALLAX
   // Move os elementos suavemente conforme o usuário movimenta o mouse
-  // ==========================================================================
-
   function renderParallax() {
     smoothX += (mouseX - smoothX) * 0.06;
     smoothY += (mouseY - smoothY) * 0.06;
@@ -98,43 +82,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const speed = Math.min(Math.abs(velocityX) + Math.abs(velocityY), 40);
 
-    // ----------------------------------------------------------------------
     // Astronauta
-    // ----------------------------------------------------------------------
-
     if (astro) {
       astro.style.transform = `translate3d(${smoothX * 2}px, ${smoothY * 2}px, 0) rotate(${smoothX * 0.3 + speed * 0.02}deg)`;
     }
 
-    // ----------------------------------------------------------------------
+ 
     // Texto principal
-    // ----------------------------------------------------------------------
-
     if (text) {
       text.style.transform = `translate3d(${smoothX * 0.6}px, ${smoothY * 0.6}px, 0)`;
     }
 
-    // ----------------------------------------------------------------------
+    
     // Fundo animado
-    // ----------------------------------------------------------------------
-
     if (bodyEl) {
       bodyEl.style.setProperty("--bg-parallax-x", `${smoothX * 0.2}px`);
       bodyEl.style.setProperty("--bg-parallax-y", `${smoothY * 0.2}px`);
     }
 
-    // ----------------------------------------------------------------------
     // Widget de focos de calor
-    // ----------------------------------------------------------------------
-
     if (heatWidget) {
       heatWidget.style.transform = `translate3d(${smoothX * 0.8}px, ${smoothY * 0.8}px, 0)`;
     }
 
-    // ----------------------------------------------------------------------
     // Cards de estatísticas
-    // ----------------------------------------------------------------------
-
     cards.forEach((card, i) => {
       const depth = (i + 1) * 0.15;
       const x = smoothX * depth;
@@ -147,11 +118,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderParallax();
 
-  // ==========================================================================
+
   // WIDGET DE FOCOS DE CALOR
   // Simula atualização automática dos dados
-  // ==========================================================================
-
   let currentValue = 127;
 
   function updateHeat() {
